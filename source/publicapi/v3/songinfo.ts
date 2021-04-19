@@ -1,4 +1,4 @@
-const TAG: string = 'v2/songinfo.ts\t';
+const TAG: string = 'v3/songinfo.ts\t';
 
 import syslog from '../../modules/syslog/syslog';
 import APIError from '../../modules/apierror/apierror';
@@ -55,7 +55,8 @@ export default (argument: any): Promise<any> => {
             jacketDesigner: _arc_songinfo.jacket_designer_pst,
             rating: _arc_songinfo.difficultly_pst,
             ratingReal: _arc_songinfo.rating_pst,
-            ratingPlus: (_arc_songinfo.difficultly_pst % 2 != 0)
+            ratingPlus: (_arc_songinfo.difficultly_pst % 2 != 0),
+            totalNotes: _arc_songinfo.notes_pst
           },
           {
             ratingClass: 1,
@@ -63,7 +64,8 @@ export default (argument: any): Promise<any> => {
             jacketDesigner: _arc_songinfo.jacket_designer_prs,
             rating: _arc_songinfo.difficultly_prs,
             ratingReal: _arc_songinfo.rating_prs,
-            ratingPlus: (_arc_songinfo.difficultly_prs % 2 != 0)
+            ratingPlus: (_arc_songinfo.difficultly_prs % 2 != 0),
+            totalNotes: _arc_songinfo.notes_prs
           },
           {
             ratingClass: 2,
@@ -71,7 +73,8 @@ export default (argument: any): Promise<any> => {
             jacketDesigner: _arc_songinfo.jacket_designer_ftr,
             rating: _arc_songinfo.difficultly_ftr,
             ratingReal: _arc_songinfo.rating_ftr,
-            ratingPlus: (_arc_songinfo.difficultly_ftr % 2 != 0)
+            ratingPlus: (_arc_songinfo.difficultly_ftr % 2 != 0),
+            totalNotes: _arc_songinfo.notes_ftr
           }
         ]
       };
@@ -84,7 +87,8 @@ export default (argument: any): Promise<any> => {
           jacketDesigner: _arc_songinfo.jacket_designer_byn,
           rating: _arc_songinfo.difficultly_byn,
           ratingReal: _arc_songinfo.rating_byn,
-          ratingPlus: (_arc_songinfo.difficultly_byn % 2 != 0)
+          ratingPlus: (_arc_songinfo.difficultly_byn % 2 != 0),
+          totalNotes: _arc_songinfo.notes_byn
         };
       }
 
